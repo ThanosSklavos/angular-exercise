@@ -1,0 +1,15 @@
+
+<div class="row m-2 mt-4 border border-2 border-primary text-start">  
+  <div>
+  <label class="row m-1" for="input">Γράψτε μια λέξη</label>
+  <input class="row m-1 border-soft " type="text" name="input" (input)="onUserInput($event)" [value]="userInput">
+  </div>
+  <div>
+  <button (click)="onSubmit()" class="m-1 mb-3 btn btn-sm btn-primary">Υποβολή</button>
+  </div>
+</div>
+<div class="row">
+  <app-child1 class="col" ></app-child1>
+  <app-child2 class="col"></app-child2>
+</div>
+
