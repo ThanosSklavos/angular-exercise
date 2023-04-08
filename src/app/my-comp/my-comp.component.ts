@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Output} from '@angular/core';
 
 
 @Component({
@@ -8,7 +8,9 @@ import { Component} from '@angular/core';
 })
 export class MyCompComponent {
 
-  userInput = '';
+  userInput:string = '';
+  oddInputs:string[] = [];
+  evenInputs:string[] = [];
 
   onUserInput(event: Event) {
     const target = event.target as HTMLInputElement
@@ -17,25 +19,27 @@ export class MyCompComponent {
 
   onSubmit() {
     if (this.userInput.length % 2 === 0) {    //even length
-      this.onAddEvenWord(this.userInput);
+      // this.onAddEvenWord(this.userInput);
+      this.evenInputs.push(this.userInput) 
     } else {     // odd length
-      this.onAddOddWord(this.userInput)
+      // this.onAddOddWord(this.userInput)
+      this.oddInputs.push(this.userInput)
     }
   }
 
-  onAddEvenWord(word: string) {
-    const compDiv = document.getElementById('comp2Div');
-    if (compDiv) {
-      compDiv.innerHTML += '<span class="row">'+ word +'</span>';
-    }
-  }
+  // onAddEvenWord(word: string) {
+  //   const compDiv = document.getElementById('comp2Div');
+  //   if (compDiv) {
+  //     compDiv.innerHTML += '<span class="row">'+ word +'</span>';
+  //   }
+  // }
 
-  onAddOddWord(word: string) {
-    const compDiv = document.getElementById('comp1Div');
-    if (compDiv) {
-      compDiv.innerHTML += '<span class="row">'+ word +'</span>';
-    }
-  }
+  // onAddOddWord(word: string) {
+  //   const compDiv = document.getElementById('comp1Div');
+  //   if (compDiv) {
+  //     compDiv.innerHTML += '<span class="row">'+ word +'</span>';
+  //   }
+  // }
 
  
 }

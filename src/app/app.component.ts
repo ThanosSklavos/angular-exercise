@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-exercise-0';
+  insert:string = "hellooo"
 }

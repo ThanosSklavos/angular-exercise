@@ -1,6 +1,6 @@
 
 <div class="row m-2 mt-4 border border-2 border-primary text-start">  
-  <div>
+  <div class="col">
   <label class="row m-1" for="input">Γράψτε μια λέξη</label>
   <input class="row m-1 border-soft " type="text" name="input" (input)="onUserInput($event)" [value]="userInput">
   </div>
@@ -9,7 +9,8 @@
   </div>
 </div>
 <div class="row">
-  <app-child1 class="col" ></app-child1>
-  <app-child2 class="col"></app-child2>
+  <app-child1 class="col" [oddInputs]='oddInputs'></app-child1>
+  <app-child2 class="col" [evenInputs]='evenInputs'></app-child2>
+  
 </div>
 

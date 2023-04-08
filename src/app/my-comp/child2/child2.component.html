@@ -1,3 +1,5 @@
 <div class="row m-2 mb-3 border border-2 border-primary d-flex justify-content-center" id="comp2Div">
-    <span class="row fw-bold">Λέξεις με ζυγό μήκος</span>
+    <span class="col fw-bold">Λέξεις με ζυγό μήκος</span>
+    <button (click)="onClear()" class="ml-2 col-2 btn btn-primary btn-sm">Clear</button>
+    <span *ngFor="let str of evenInputs">{{str}}</span>
   </div>

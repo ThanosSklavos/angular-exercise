@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-child1',
@@ -6,4 +6,9 @@ import { Component} from '@angular/core';
   styleUrls: ['./child1.component.css']
 })
 export class Child1Component {
+@Input() oddInputs:string[] = []
+@Output() oddInputsLength= this.oddInputs.length
+onClear() {
+  this.oddInputs.length = 0
+}
 }
