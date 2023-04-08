@@ -7,7 +7,7 @@ import { Component, Input, Output} from '@angular/core';
 })
 export class Child1Component {
 @Input() oddInputs:string[] = []
-@Output() oddInputsLength= this.oddInputs.length
+
 onClear() {
   this.oddInputs.length = 0
 }
